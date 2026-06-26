@@ -1,0 +1,46 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: Tell us what went wrong...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open app
+        2. Select field
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iOS (Expo Go)
+        - Android (Expo Go)
+        - iOS (Development Build)
+        - Android (Development Build)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App / Expo SDK version
+      placeholder: e.g. SDK 54
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error logs
+      description: Paste any relevant console output.
+      render: shell
